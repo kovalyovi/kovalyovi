@@ -1,0 +1,69 @@
+﻿.navbar-inverse {
+    background-color: #792f05;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #d8cdce;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    color: #d8cdce;
+}
+
+p a {
+    padding: 4px;
+}
+
+button, p a, html input[type="button"], input[type="reset"], input[type="submit"] {
+    border-radius: 12px;
+    background-color: #ca8623;
+    color: #fff;
+    outline: none;
+    border: 2px solid white;
+}
+
+p a:hover,
+input[type="submit"]:hover {
+    border: 2px solid #ca8623;
+    background-color: white;
+    color: #ca8623;
+}
+
+tbody a {
+    padding: 4px;
+    border-radius: 8px;
+    border: 2px solid white;
+}
+
+tbody a:first-child {
+    background: green;
+    color: white;
+}
+
+tbody a:first-child:hover {
+    border-color: green;
+    background: white;
+    color: green;
+}
+
+tbody a:nth-child(2) {
+    background: #f7ea25;
+    color: blue;
+}
+
+tbody a:nth-child(2):hover {
+    border-color: #f7ea25;
+    color: #f7ea25;
+    background: white;
+}
+
+tbody a:last-child {
+    background: #e55454;
+    color: white;
+}
+
+tbody a:last-child:hover {
+    border-color: #e55454;
+    color: #e55454;
+    background: white;
+}
