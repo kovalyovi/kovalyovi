@@ -8,6 +8,7 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway:400,700&display=swap" rel="stylesheet">
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -16,9 +17,9 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+<body style="background-image: url('/images/background.jpg'); background-size: cover; font-family: 'Raleway', sans-serif; font-size: 1.6rem;">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background: #7a2d09; border-color: #7a2d09">
+        <div class="container" style="color: #7a2d09">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -26,28 +27,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-page="/Index" class="navbar-brand">MegaDeskWebApp</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
-                </ul>
+                <a style="color: white; font-family: 'Indie Flower', cursive; font-size: 3.4rem;" asp-page="/Index" class="navbar-brand">MegaDesk Web Application</a>
             </div>
         </div>
     </nav>
 
     <partial name="_CookieConsentPartial" />
 
-    <div class="container body-content">
+    <div class="container body-content" style="
+    background: hsla(0, 0%, 100%, 0.8);
+    margin-top: 60px;
+">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; 2019 - MegaDeskWebApp</p>
-        </footer>
     </div>
-
+    <footer style="text-align: center; width: 100%; height: 80px; background: #7a2d09; color: white; font-weight: bold; 
+                   position: fixed; bottom: 0; padding-top: 25px; font-size: 2rem;">
+        <p>&copy; 2019 - MegaDeskWebApp</p>
+    </footer>
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>

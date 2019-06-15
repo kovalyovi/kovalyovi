@@ -1,0 +1,67 @@
+﻿@page
+@model MegaDeskWebApp.Pages.DeskQuotes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Desk Quote Information</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.CustomerName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.CustomerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.RushOptions)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.RushOptions)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.Desk.NumberOfDrawers)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.Desk.NumberOfDrawers)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.Desk.SurfaceMaterial)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.Desk.SurfaceMaterial)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.Desk.Width)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.Desk.Width)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.Desk.Depth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.Desk.Depth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.QuotePrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.QuotePrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.Date)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.DeskQuote.ID" class="btn btn-warning btn-sm">Edit</a>
+    <a asp-page="./Index" class="btn btn-primary btn-sm">Back to List</a>
+</div>

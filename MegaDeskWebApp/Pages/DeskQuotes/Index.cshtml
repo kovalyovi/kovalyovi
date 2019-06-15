@@ -1,0 +1,105 @@
+﻿@page
+
+@model MegaDeskWebApp.Pages.DeskQuotes.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Quote List</h2>
+
+
+<div style="display: flex; flex-direction: row; justify-content: flex-start;">
+    <p>
+        <a asp-page="Create" class="btn btn-success btn-sm">Create New</a>
+    </p>
+
+    <form>
+        <p>
+            <input value="Name" asp-for="Result" class="invisible" style="width: 0px;" />
+            <input type="submit" class="btn btn-default btn-sm" value="Sort By Customer Name" />
+        </p>
+    </form>
+
+    <form>
+        <p>
+            <input value="Date" asp-for="Result" class="invisible" style="width: 0px;" />
+            <input type="submit" class="btn btn-default btn-sm" value="Sort By Date" />
+        </p>
+    </form>
+
+    <form style="margin-left: 20px;">
+        <p>
+            Customer Name: <input type="text" asp-for="SearchString" />
+            <input type="submit" class="btn btn-default btn-sm" value="Filter" />
+        </p>
+    </form>
+</div>
+
+<table class="table table-striped table-sm" style="text-align: center;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DeskQuote[0].CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeskQuote[0].Desk.SurfaceMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeskQuote[0].RushOptions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeskQuote[0].Desk.NumberOfDrawers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeskQuote[0].Desk.Width)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeskQuote[0].Desk.Depth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeskQuote[0].QuotePrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeskQuote[0].Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.DeskQuote)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Desk.SurfaceMaterial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RushOptions)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Desk.NumberOfDrawers)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Desk.Width)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Desk.Depth)
+                </td>
+                <td>
+                    $@Html.DisplayFor(modelItem => item.QuotePrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ID" class="btn btn-warning btn-sm">Edit</a>
+                    <a asp-page="./Details" asp-route-id="@item.ID" class="btn btn-info btn-sm">Details</a>
+                    <a asp-page="./Delete" asp-route-id="@item.ID" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

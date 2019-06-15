@@ -1,36 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
-namespace MegaDesk
+
+namespace MegaDeskWebApp
 {
-    class Desk
+    public class Desk
     {
-        public float Width;
-        public float Depth;
-        public int NumberOfDrawers;
-        public string SurfaceMaterial;
+        public int DeskID { get; set; }
 
-        public enum DeskMaterial
-        {
-            oak = 1,
-            wood = 2
-        }
+        [Required]
+        public float Width { get; set; }
 
-        public Desk(float width, float depth, int numberOfDrawers, string surfaceMaterial)
-        {
-            this.Width = width;
-            this.Depth = depth;
-            this.NumberOfDrawers = numberOfDrawers;
-            this.SurfaceMaterial = surfaceMaterial;
-        }
+        [Required]
+        public float Depth { get; set; }
 
-        public float getArea()
-        {
-            return this.Width * this.Depth;
-        }
+        [Required]
+        [Display(Name = "Number of Drawers")]
+        public int NumberOfDrawers { get; set; }
+
+        [Required]
+        [Display(Name = "Surface Material")]
+        public string SurfaceMaterial { get; set; }
 
 
     }
