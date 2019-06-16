@@ -33,7 +33,7 @@ namespace MegaDeskWebApp.Pages.DeskQuotes
         public async Task OnGetAsync()
         {
 
-            var entries = from m in _context.DeskQuote select m;
+            var entries = from m in _context.DeskQuote.Include(d => d.Desk) select m;
             if (Result == "Name")
             {
                 entries = entries.OrderBy(b => b.CustomerName);
