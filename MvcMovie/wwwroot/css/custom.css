@@ -1,0 +1,40 @@
+﻿html {
+    background: none;
+}
+
+.container {
+    display: block;
+    position: relative;
+    background: none;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.80);
+}
+
+body {
+    background: url("../images/wallpaper.jpg");
+    color: black !important;
+    font-size: 2.2rem !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: bold !important;
+}
+
+footer {
+    color: brown !important;
+    text-align: center !important;
+    margin: 10px 0;
+}
+
+body a {
+    color: blue;
+}
+
+header .container {
+    background: rgba(122, 0, 0, 0.58) !important;
+}
+
+header .container a{
+    color: white;
+    font-weight: bold;
+}
